@@ -1,0 +1,17 @@
+services:
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=sqlite:////app/case_data_eng.db
+      - LOG_LEVEL=INFO
+      - LOG_SQL_QUERIES=False
+    volumes:
+      - db_data:/app/data
+    command: >
+      sh -c "alembic upgrade head &&
+             uvicorn app.main:app --host 0.0.0.0 --port 8000"
+
+volumes:
+  db_data:

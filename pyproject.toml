@@ -1,0 +1,22 @@
+[project]
+name = "case-data-eng"
+version = "0.1.0"
+description = "[CRUD] - Data Engineer Case"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "alembic>=1.13.0,<1.17.0",
+    "bcrypt>=4.3.0",
+    "fastapi>=0.123.0",
+    "pydantic[email]>=2.0.0",
+    "pydantic-settings>=2.0.0,<2.12.0",
+    "python-dotenv>=1.2.1",
+    "sqlalchemy>=2.0.44",
+    "uvicorn>=0.38.0",
+    "pytest>=8.0.0",
+    "httpx>=0.27.0",
+    "pytest-cov>=7.0.0",
+]
+
+[tool.pytest.ini_options]
+python_functions = ["should_*", "test_*"]
