@@ -1,0 +1,29 @@
+### Ambientes Virtuais ###
+.venv/
+venv/
+env/
+ENV/
+
+### Python ###
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+### Configurações e Segredos ###
+.env
+.flaskenv
+
+### Testes e Cobertura ###
+.pytest_cache/
+.coverage
+htmlcov/
+tests/.pytest_cache/
+
+### Banco de Dados ###
+*.db
+*.sqlite3
+
+### IDEs (Opcional, mas recomendado) ###
+.vscode/
+.idea/
